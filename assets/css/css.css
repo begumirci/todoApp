@@ -1,0 +1,161 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+h1{
+    text-align: center;
+    color:pink;
+    font-size: calc(5vw + 24px);
+    margin-bottom:25px;
+}
+
+ul{
+    list-style: none;
+}
+
+.todo-container {
+    display: grid;
+    justify-content: center;
+    gap:15px;
+}
+
+[name="option"] {
+    display: none;
+    
+}
+
+
+.options label {
+    border:1px solid transparent;
+    padding:4px;
+}
+
+.options label:has(:checked) {
+    border-color: rgba(175, 47, 47, 0.1);
+    background-color: lightcoral;
+}
+
+.options label:hover{
+    background-color: lightcoral;
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap:40px;
+    color:pink;
+    font-size:15px;
+}
+
+.todo-input {
+   width:400px;
+   height: 30px;
+   border-radius: 7px;
+   padding:6px 12px;
+   border-color: pink;
+   border-style: solid;
+}
+
+.todo-input:visited{
+    border-color:red;
+}
+
+h1:hover{
+    text-shadow:1px 1px 15px lightcoral;
+    color:white;
+
+}
+
+
+.options label{
+    cursor:pointer;
+}
+/*
+.todo-item:has(input:checked) .todo-name{
+    text-decoration: line-through;
+    opacity: 0.5;
+}*/
+
+.todo-item{
+    margin-bottom:15px;
+}
+
+.del-btn{
+    margin-left:20px;
+    background-color: pink;
+    border:1px solid white;
+    padding:4px;
+    border-radius: 100px;
+    text-align: center;
+    color:lightcyan;
+    cursor: pointer;
+}
+
+.del-btn:hover{
+    background-color: lightcyan;
+    color:pink;
+}
+
+.todo-item:not(:last-child){
+    margin-bottom:15px;
+}
+
+.todo-list.completed li:not(.completed){
+    display:none;
+}
+
+.todo-list.active li.completed {
+    display: none;
+}
+.clearAll{
+    cursor: pointer;
+    color:pink;
+    background-color: lightcoral;
+    border-color: white;
+    padding:4px;
+    
+}
+
+.todo-list li.completed label{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.unvisible{
+    display: none;
+
+}
+
+.clearAll:hover{
+    background-color: pink;
+    color:lightcoral;
+}
+
+
+.todo-item span:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.left{
+    color:lightblue;
+}
+
+
