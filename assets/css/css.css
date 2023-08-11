@@ -40,7 +40,6 @@ ul{
     
 }
 
-
 .options label {
     border:1px solid transparent;
     padding:4px;
@@ -49,10 +48,12 @@ ul{
 .options label:has(:checked) {
     border-color: rgba(175, 47, 47, 0.1);
     background-color: lightcoral;
+    border-radius: 5px;
 }
 
 .options label:hover{
     background-color: lightcoral;
+    border-radius: 5px;
 
 }
 
@@ -80,18 +81,11 @@ ul{
 h1:hover{
     text-shadow:1px 1px 15px lightcoral;
     color:white;
-
 }
-
 
 .options label{
     cursor:pointer;
 }
-/*
-.todo-item:has(input:checked) .todo-name{
-    text-decoration: line-through;
-    opacity: 0.5;
-}*/
 
 .todo-item{
     margin-bottom:15px;
@@ -124,16 +118,16 @@ h1:hover{
 .todo-list.active li.completed {
     display: none;
 }
+
 .clearAll{
     cursor: pointer;
     color:pink;
     background-color: lightcoral;
     border-color: white;
     padding:4px;
-    
 }
 
-.todo-list li.completed label{
+.completed {
     text-decoration: line-through;
     opacity: 0.5;
 }
