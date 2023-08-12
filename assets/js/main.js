@@ -17,7 +17,7 @@ todoForm.addEventListener('submit',(e) =>{
     
     todoList.innerHTML += `<li class="todo-item">
                 <label>
-                    <input class='toggle' type="checkbox">
+                    <input name="checkbox" class='toggle' type="checkbox">
                     <span class='todo-name'>${inputElement.value}</span>
                     <button class="del-btn" >x</button>
                 </label>
@@ -80,12 +80,12 @@ function removeTodo(){
 //Bütün clickleri bağlama fonskiyonu
 function bindClicks() {
 
-    for (const btn of document.querySelectorAll('.del-btn')) {
-        btn.innerText = 'del';
-        btn.addEventListener('click',removeTodo)
+    for (const btn1 of document.querySelectorAll('.del-btn')) {
+        btn1.innerText = 'del';
+        btn1.addEventListener('click',removeTodo)
     }
-    for (const btn of document.querySelectorAll('.toggle')) {
-        btn.addEventListener('click',markTodo);
+    for (const btn2 of document.querySelectorAll('.toggle')) {
+        btn2.addEventListener('click',markTodo);
     }
 }
 
@@ -130,7 +130,7 @@ function dataLoad(){
 dataLoad();
 showBtn();
 todoCounter();
-
+bindClicks();
 
 
 
