@@ -7,6 +7,7 @@ const todos = document.querySelectorAll('span.todo-name');
 const clearComplete = document.querySelector('.clearAll');
 const options = document.querySelectorAll('[name="option"]');
 const listCount = document.querySelector('#kalan');
+const option = document.querySelector('.options');
 
 
 
@@ -100,12 +101,20 @@ function clearCompleted() {
 }
 
 function todoCounter(){
+    
     const todoCount = document.querySelectorAll('.todo-item:not(.completed)').length;
     if(todoCount === 0 || todoCount === 1) {
         listCount.innerText = `${todoCount} item left`;
     }else {
         listCount.innerText = `${todoCount} items left`;
     }
+
+    if(todoCount === 0){
+        option.classList.add('unvisible');
+    }else {
+        option.classList.remove('unvisible');
+    }
+
     saveItem();
 }
 
@@ -118,6 +127,7 @@ function showBtn (){
     }
     saveItem();
 }
+
 
 function saveItem(){
     localStorage.setItem("data",todoList.innerHTML)
