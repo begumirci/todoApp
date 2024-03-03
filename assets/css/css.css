@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -6,150 +8,204 @@
   margin: 0;
   padding: 0;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-h1{
-    text-align: center;
-    color:pink;
-    font-size: calc(5vw + 24px);
-    margin-bottom:25px;
+h1 {
+  text-align: center;
+  color: pink;
+  font-size: calc(5vw + 24px);
+  margin-bottom: 25px;
+  padding-top: 5rem;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 .todo-container {
-    display: grid;
-    justify-content: center;
-    gap:15px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  gap: 25px;
+}
+.container {
+  padding-inline: 10%;
+}
+[name='option'] {
+  display: none;
 }
 
-[name="option"] {
-    display: none;
-    
+.options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .options label {
-    border:1px solid transparent;
-    padding:4px;
+  border: 1px solid transparent;
 }
 
 .options label:has(:checked) {
-    border-color: rgba(175, 47, 47, 0.1);
-    background-color: lightcoral;
-    border-radius: 5px;
+  border-color: rgba(175, 47, 47, 0.1);
+  background-color: lightcoral;
+  border-radius: 12px;
+  padding-inline: 12px;
+  padding-block: 5px;
+  font-weight: bold;
 }
 
-.options label:hover{
-    background-color: lightcoral;
-    border-radius: 5px;
+.options label:hover {
+  background-color: lightcoral;
+  border-radius: 12px;
 
+  padding-inline: 12px;
+  padding-block: 5px;
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    gap:40px;
-    color:pink;
-    font-size:15px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: pink;
+  font-size: 15px;
 }
 
 .todo-input {
-   width:400px;
-   height: 30px;
-   border-radius: 7px;
-   padding:6px 12px;
-   border-color: pink;
-   border-style: solid;
+  width: 100%;
+  border-radius: 7px;
+  padding: 12px 12px;
+  border-color: pink;
+  border-style: solid;
+  color: lightblue;
+
+  &::placeholder {
+    color: pink;
+  }
+
+  &:focus {
+    border-color: transparent;
+    outline: 2px solid lightblue;
+  }
 }
 
-.todo-input:visited{
-    border-color:red;
+.todo-input:visited {
+  border-color: red;
 }
 
-h1:hover{
-    text-shadow:1px 1px 15px lightcoral;
-    color:white;
+h1:hover {
+  text-shadow: 1px 1px 15px lightcoral;
+  color: white;
 }
 
-.options label{
-    cursor:pointer;
+.options label {
+  cursor: pointer;
 }
 
-.todo-item{
-    margin-bottom:15px;
+.todo-item {
+  margin-bottom: 15px;
+  & label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
-.del-btn{
-    margin-left:20px;
-    background-color: pink;
-    border:1px solid white;
-    padding:4px;
-    border-radius: 100px;
-    text-align: center;
-    color:lightcyan;
-    cursor: pointer;
+.del-btn {
+  background-color: pink;
+  border: 1px solid white;
+  padding-inline: 12px;
+  padding-block: 5px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.del-btn:hover{
-    background-color: lightcyan;
-    color:pink;
+.del-btn:hover {
+  background-color: lightcoral;
+  color: pink;
 }
 
-.todo-item:not(:last-child){
-    margin-bottom:15px;
+.todo-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
-.todo-list.completed li:not(.completed){
-    display:none;
+.todo-list.completed li:not(.completed) {
+  display: none;
 }
 
 .todo-list.active li.completed {
-    display: none;
+  display: none;
 }
 
-.clearAll{
-    cursor: pointer;
-    color:pink;
-    background-color: lightcoral;
-    border-color: white;
-    padding:4px;
+.clearAll {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background-color: pink;
+  border-color: white;
+  padding-inline: 12px;
+  padding-block: 5px;
+  border-radius: 12px;
 }
 
 .completed {
-    text-decoration: line-through;
-    opacity: 0.5;
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: pink;
 }
 
-.unvisible{
-    display: none;
-
+.unvisible {
+  display: none;
 }
 
-.clearAll:hover{
-    background-color: pink;
-    color:lightcoral;
+.clearAll:hover {
+  background-color: pink;
+  color: lightcoral;
 }
 
-
-.todo-item span:hover{
-    opacity: 0.5;
-    cursor: pointer;
+.todo-item span:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
-.left{
-    color:lightblue;
+.left {
+  color: lightblue;
 }
-
-
+@media only screen and (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: pink;
+    font-size: 15px;
+  }
+  h1 {
+    text-align: center;
+    color: pink;
+    font-size: 70px;
+    margin-bottom: 25px;
+    padding-top: 5rem;
+  }
+}

@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/css.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/css.css" />
     <script src="assets/js/main.js" defer></script>
     <title>todos</title>
-</head>
+  </head>
 
-<body>
-    <h1>todos</h1>
-    <div class="todo-container">
+  <body>
+    <div class="container">
+      <h1>todos</h1>
+      <div class="todo-container">
         <form class="todo-form">
-            <input class="todo-input" type="text" placeholder="What needs to be done?">
+          <input
+            class="todo-input"
+            type="text"
+            placeholder="What needs to be done?"
+          />
         </form>
 
-        <ul class="todo-list" id="ull">
-        </ul>
+        <ul class="todo-list" id="ull"></ul>
 
         <div class="footer">
-            <div class="left">
-                <span id="kalan"></span>
-            </div>
+          <div class="left">
+            <span id="kalan"></span>
+          </div>
 
-            <div class="options">
-                <label><input checked type="radio" name="option" value="all">All</label>
-                <label><input type="radio" name="option" value="active">Active</label>
-                <label><input type="radio" name="option" value="completed">Completed</label>
-            </div>
+          <div class="options">
+            <label
+              ><input
+                checked
+                type="radio"
+                name="option"
+                value="all"
+              />All</label
+            >
+            <label
+              ><input type="radio" name="option" value="active" />Active</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="option"
+                value="completed"
+              />Completed</label
+            >
+          </div>
 
-            <div class="clearAll">
-                Clear completed
-            </div>
+          <div class="clearAll">Clear completed</div>
         </div>
+      </div>
     </div>
-
-
-</body>
-
+  </body>
 </html>
